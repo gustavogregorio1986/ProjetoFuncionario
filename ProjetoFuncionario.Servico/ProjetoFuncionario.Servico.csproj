@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoFuncionario.Data\ProjetoFuncionario.Data.csproj" />
+    <ProjectReference Include="..\ProjetoFuncionario.Dominio\ProjetoFuncionario.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>
