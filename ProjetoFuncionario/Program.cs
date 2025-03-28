@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProjetoFuncionario.Data.Context;
+using ProjetoFuncionario.Data.Mapping;
+using ProjetoFuncionario.Data.repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DbContexto>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAutoMapper(typeof(FuncionarioMap));
+
+builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+
 
 var app = builder.Build();
 
